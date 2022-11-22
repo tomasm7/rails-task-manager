@@ -1,0 +1,10 @@
+<div class="container mt-3">
+  <h1>My Tasks</h1>
+  <% @tasks.each do |task| %>
+    <div class="form">
+      <p><%= link_to task.title, task_path(task) %></p>
+      <p><%= link_to 'Delete Task', task_path(task), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"} %></p>
+    </div>
+  <% end %>
+  <%= link_to 'Add new task', new_task_path %>
+</div>

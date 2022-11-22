@@ -1,0 +1,21 @@
+<div class="container">
+  <%= form_with model: @task do |f| %>
+    <div class="mb-3">
+      <%= f.label :title, class:"form-label" %>
+      <%= f.text_field :title, class:"form-control" %>
+    </div>
+
+    <div class="mb-3">
+      <%= f.label :details, class: "form-label" %>
+      <%= f.text_area :details, class: "form-control" %>
+    </div>
+
+    <div class="col-auto">
+      <%= f.submit class:"btn btn-primary mt-3" %>
+    </div>
+  <% end %>
+</div>
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
+Terms
